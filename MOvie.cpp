@@ -1,12 +1,18 @@
 #include <iostream>
 using namespace std;
-int main() {
+int main()
+ {
     int age;
     char booked;
     cout<< "Enter your age:";
     cin >> age;
 
-    if(age >= 21)
+    while (age <=10 || age >= 100)
+    {
+        cout<< "Invalid age! Enter again:";
+        cin >> age;
+    }
+    if(age >= 10 && age <= 100)
     {
         cout<< "Is the Ticket booked? (Y/N):";
         cin >> booked;
@@ -16,12 +22,12 @@ int main() {
         }
         else
         {
-            cout<< "Please book the ticket fist";
+            cout<< "Please book the ticket first";
         }
     }
     else
     {
-        cout<< "Entrary not allowed";
+        cout<< "Entry not allowed";
     }
 
 }
