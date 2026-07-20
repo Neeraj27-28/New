@@ -19,8 +19,7 @@ int main ()
       cout << "1.Check Balance" << endl;
       cout << "2.Deposit money"<< endl;
       cout << "3.Withdraw money" << endl;
-      cout << "4.Change Pin" << endl;
-      cout << "5.Exit" << endl;
+      cout << "4.Exit" << endl;
 
       cout << "Choose an option:";
       cin >> choice;
