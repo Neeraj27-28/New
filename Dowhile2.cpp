@@ -68,22 +68,6 @@ int main ()
         }
 
         case 4:
-         int Newpin;
-         cout << "Enter your old Pin:";
-         cin >> Pin;
-         if (Pin == 2728)
-         {
-          cout <<"Enter your New Pin:";
-          cin >> Newpin;
-          cout << "Pin was changed successfully!" << endl;
-         }
-         else
-         {
-          cout << "Incorrect Pin!" << endl;
-         }
-         break;
-
-        case 5:
           cout << "Thanks for using our ATM machine!" << endl;
           break;
 
@@ -91,7 +75,7 @@ int main ()
           cout << "choose the correct option!" << endl;
       }
 
-    } while (choice != 5);
+    } while (choice != 4);
   }
   else
   {
