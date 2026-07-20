@@ -15,9 +15,9 @@ int main ()
     double balance = 100000.00;
     do
     {
-      cout << "======== ATM menue ========" << endl;
+      cout << "======== ATM Menu ========" << endl;
       cout << "1.Check Balance" << endl;
-      cout << "2.Deposite money"<< endl;
+      cout << "2.Deposit money"<< endl;
       cout << "3.Withdraw money" << endl;
       cout << "4.Exit" << endl;
 
@@ -48,7 +48,7 @@ int main ()
           double Withdraw;
           cout << "Enter amount to withdraw: Rs";
           cin >> Withdraw;
-          if (Withdraw <= balance)
+          if (Withdraw > 0 && Withdraw <= balance)
           {
             balance = balance - Withdraw;
             cout << "Amount successfully withdrawn!" << endl;
