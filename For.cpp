@@ -51,18 +51,18 @@ int main ()
           if (Withdraw <= balance)
           {
             balance = balance - Withdraw;
-            cout << "Amount successfully Withdraw!" << endl;
-            cout << "Remaning balance: Rs" << balance << endl;
+            cout << "Amount successfully withdrawn!" << endl;
+            cout << "Remaining balance: Rs" << balance << endl;
           }
           else
           {
-            cout << "balance was not sufficient!" << endl;
+            cout << "Insufficient balance!" << endl;
           }
           break;
         }
 
         case 4:
-          cout << "thanks for using our ATM mechaine!" << endl;
+          cout << "Thanks for using our ATM machine!" << endl;
           break;
 
         default:
