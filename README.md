@@ -1,2 +1,2 @@
 # New
-I am basicaly practicing a c++ code .
+I am basically practicing a c++ code .
