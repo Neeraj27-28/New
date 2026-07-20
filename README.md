@@ -1,8 +1,2 @@
 # New
-Neeraj singh
-#include <iostream>
-using namespace std;
-int main() 
-{
-    cout <<"Hello, World"<< endl;
-}
+I am basicaly practicing a c++ code .
