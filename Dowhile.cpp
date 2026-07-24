@@ -4,17 +4,20 @@ using namespace std;
 int main () 
 {
   cout << fixed << setprecision(2);
-  int Pin;
+  int pin;
   for (int i = 0; i <3; i++)
   {
+   cout << "Welcome to ATM machine!" << endl;
    cout << "Enter your pin:";
-   cin >> Pin;
-   if (Pin == 2728)
+   cin >> pin;
+   if (pin == 2728)
    {
      cout << "Access granted" << endl;
 
      int choice;
      double balance = 100000.00;
+     double lastDeposit = 0.00;
+     double lastWithdraw = 0.00;
      do
      {
        cout << "======== ATM Menu ========" << endl;
@@ -22,7 +25,8 @@ int main ()
        cout << "2.Deposit money"<< endl;
        cout << "3.Withdraw money" << endl;
        cout << "4.Change Pin" << endl;
-       cout << "5.Exit" << endl;
+       cout << "5.Mini statement" << endl;
+       cout << "6.Exit" << endl;
 
        cout << "Choose an option:";
        cin >> choice;
@@ -45,6 +49,7 @@ int main ()
            }
 
            balance = balance + Deposit;
+           lastDeposit = Deposit;  //.Deposit ammount hai ya jo necha case 5 ma use ho rahi hai.//
 
            cout<< "Amount successfully deposited!" << endl;
            cout << "balance: Rs" << balance << endl;
@@ -59,6 +64,8 @@ int main ()
            if (Withdraw > 0 && Withdraw <= balance)
            {
              balance = balance - Withdraw;
+             lastWithdraw = Withdraw;  //.Withdraw ammount hai ya jo necha case 5 ma use ho rahi hai.//
+
              cout << "Amount successfully withdrawn!" << endl;
              cout << "Remaining balance: Rs" << balance << endl;
            }
@@ -68,23 +75,30 @@ int main ()
            }
            break;
           }
-
          case 4:
            int Newpin;
-             cout << "Enter your old pin:";
-             cin >> Pin;
-             if (Pin == 2728)
+             cout << "Enter your old PIN:";
+             cin >> pin;
+             if (pin == 2728)
              {
                cout <<"Enter your New Pin:";
                cin >> Newpin;
                cout << "Pin was changed successfully!" << endl;
               }
-             else if(i < 3)
+             else 
              {
                cout << "Incorrect Pin! try again." << endl;
              }
              break;
-         case 5:
+
+          case 5:
+            cout << "============ Mini Statement =============" << endl;
+            cout << "Current balance: Rs" << balance << endl;
+            cout << "Last deposit: Rs" << lastDeposit << endl;        
+            cout << "Last withdrawal: Rs" << lastWithdraw << endl;
+            cout << "=========================================" << endl;
+            break;   
+         case 6:
           cout << "Thanks for using our ATM machine!" << endl;
           break;
 
@@ -92,7 +106,7 @@ int main ()
           cout << "choose the correct option!" << endl;
         }
 
-      } while (choice != 5);
+      } while (choice != 6);
       break;
     }
      else if(i < 2)
