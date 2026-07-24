@@ -71,20 +71,19 @@ int main ()
 
          case 4:
            int Newpin;
-           cout << "Enter your old Pin:";
-           cin >> Pin;
-         if (Pin == 2728)
-         {
-           cout <<"Enter your New Pin:";
-           cin >> Newpin;
-           cout << "Pin was changed successfully!" << endl;
-          }
-         else
-         {
-          cout << "Incorrect Pin!" << endl;
-         }
-         break;
-
+             cout << "Enter your old pin:";
+             cin >> Pin;
+             if (Pin == 2728)
+             {
+               cout <<"Enter your New Pin:";
+               cin >> Newpin;
+               cout << "Pin was changed successfully!" << endl;
+              }
+             else if(i < 3)
+             {
+               cout << "Incorrect Pin! try again." << endl;
+             }
+             break;
          case 5:
           cout << "Thanks for using our ATM machine!" << endl;
           break;
@@ -94,6 +93,7 @@ int main ()
         }
 
       } while (choice != 5);
+      break;
     }
      else if(i < 2)
     {
@@ -102,6 +102,7 @@ int main ()
      else
     {
       cout << "Access denied! your account has been blocked. Please contact customer support or Bank." << endl;
+      break;
     }
-  }
+  } 
 } 
